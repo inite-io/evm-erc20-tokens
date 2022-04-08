@@ -27,6 +27,8 @@ module.exports = {
     goerli: goerliNetworkConfig(),
     bscMainnet: bscMainnetNetworkConfig(),
     bscTestnet: bscTestnetNetworkConfig(),
+    auroraTestnet: auroraTestnetNetworkConfig(),
+    polygonTestnet: polygonTestnetNetworkConfig(),
   },
   abiExporter: {
     path: "./build/abi",
@@ -111,6 +113,42 @@ function bscTestnetNetworkConfig() {
 
   if (process.env.BSC_TESTNET_PRIVATE_KEY) {
     accountPrivateKey = `${process.env.BSC_TESTNET_PRIVATE_KEY}`;
+  }
+
+  return {
+    url: url,
+    accounts: [accountPrivateKey],
+  };
+}
+
+function auroraTestnetNetworkConfig() {
+  let url = "https://testnet.aurora.dev";
+  let accountPrivateKey =
+    "0x0000000000000000000000000000000000000000000000000000000000000000";
+  if (process.env.AURORA_TESTNET_ENDPOINT) {
+    url = `${process.env.AURORA_TESTNET_ENDPOINT}`;
+  }
+
+  if (process.env.AURORA_TESTNET_PRIVATE_KEY) {
+    accountPrivateKey = `${process.env.AURORA_TESTNET_PRIVATE_KEY}`;
+  }
+
+  return {
+    url: url,
+    accounts: [accountPrivateKey],
+  };
+}
+
+function polygonTestnetNetworkConfig() {
+  let url = "https://rpc-mumbai.matic.today";
+  let accountPrivateKey =
+    "0x0000000000000000000000000000000000000000000000000000000000000000";
+  if (process.env.POLYGON_TESTNET_ENDPOINT) {
+    url = `${process.env.POLYGON_TESTNET_ENDPOINT}`;
+  }
+
+  if (process.env.POLYGON_TESTNET_PRIVATE_KEY) {
+    accountPrivateKey = `${process.env.POLYGON_TESTNET_PRIVATE_KEY}`;
   }
 
   return {
