@@ -160,7 +160,8 @@ function auroraTestnetNetworkConfig() {
 }
 
 function polygonTestnetNetworkConfig() {
-  let url = "https://rpc-mumbai.matic.today";
+  // let url = "https://rpc-mumbai.matic.today";
+  let url = "https://polygon-mumbai.infura.io/v3/4bcc9541234b4d9e87589e21e61cf6c5";
   let accountPrivateKey =
     "0x0000000000000000000000000000000000000000000000000000000000000000";
   if (process.env.POLYGON_TESTNET_ENDPOINT) {
