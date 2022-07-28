@@ -127,12 +127,12 @@ function auroraMainnetNetworkConfig() {
   let url = "https://mainnet.aurora.dev";
   let accountPrivateKey =
     "0x0000000000000000000000000000000000000000000000000000000000000000";
-  if (process.env.AURORA_TESTNET_ENDPOINT) {
-    url = `${process.env.AURORA_TESTNET_ENDPOINT}`;
+  if (process.env.AURORA_MAINNET_ENDPOINT) {
+    url = `${process.env.AURORA_MAINNET_ENDPOINT}`;
   }
 
-  if (process.env.AURORA_TESTNET_PRIVATE_KEY) {
-    accountPrivateKey = `${process.env.AURORA_TESTNET_PRIVATE_KEY}`;
+  if (process.env.AURORA_MAINNET_PRIVATE_KEY) {
+    accountPrivateKey = `${process.env.AURORA_MAINNET_PRIVATE_KEY}`;
   }
 
   return {
@@ -182,12 +182,12 @@ function polygonMainnetNetworkConfig() {
   let url = "https://rpc-mainnet.matic.network";
   let accountPrivateKey =
     "0x0000000000000000000000000000000000000000000000000000000000000000";
-  if (process.env.POLYGON_TESTNET_ENDPOINT) {
-    url = `${process.env.POLYGON_TESTNET_ENDPOINT}`;
+  if (process.env.POLYGON_MAINNET_ENDPOINT) {
+    url = `${process.env.POLYGON_MAINNET_ENDPOINT}`;
   }
 
-  if (process.env.POLYGON_TESTNET_PRIVATE_KEY) {
-    accountPrivateKey = `${process.env.POLYGON_TESTNET_PRIVATE_KEY}`;
+  if (process.env.POLYGON_MAINNET_PRIVATE_KEY) {
+    accountPrivateKey = `${process.env.POLYGON_MAINNET_PRIVATE_KEY}`;
   }
 
   return {
