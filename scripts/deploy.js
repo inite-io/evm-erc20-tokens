@@ -6,20 +6,20 @@ async function main() {
 
   const InitToken = await ethers.getContractFactory("InitToken");
   const initToken = await InitToken.deploy(
-    "Inite INIT Token",
+    "INIT Token",
     "INIT", 
     // "0" // 0 tokens - how it should be
-    "100000" // 100k tokens - to be able to send to other people for testing
+    "1000000000" // 1B tokens - to be able to send to other people for testing
   );
 
   console.log("INIT Token address:", initToken.address);
 
   const IdeaToken = await ethers.getContractFactory("IdeaToken");
   const ideaToken = await IdeaToken.deploy(
-    "Inite Idea Token",
+    "IDEA Token",
     "IDEA", 
     // "0" // 0 tokens
-    "100000" // 100k tokens - to be able to send to other people for testing
+    "100000000" // 100m tokens - to be able to send to other people for testing
 );
 
   console.log("IDEA Token address:", ideaToken.address);
