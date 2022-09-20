@@ -15,7 +15,7 @@ async function main() {
 
   const IdeaToken = await ethers.getContractFactory("IdeaToken");
   const ideaToken = await IdeaToken.deploy(
-    "Inite IDEA Token",
+    "IDEA Token",
     "IDEA", 
     "100000000000000000000000000" // 100mln tokens
   );
