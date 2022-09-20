@@ -6,7 +6,7 @@ async function main() {
 
   const InitToken = await ethers.getContractFactory("InitToken");
   const initToken = await InitToken.deploy(
-    "Inite INIT Token",
+    "INIT Token",
     "INIT", 
     "1000000000000000000000000000" // 1bln tokens in wei
   );
