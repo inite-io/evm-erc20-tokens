@@ -8,7 +8,7 @@ async function main() {
   const initToken = await InitToken.deploy(
     "Inite INIT Token",
     "INIT", 
-    "1000000000" // 1bln tokens
+    "1000000000000000000000000000" // 1bln tokens in wei
   );
 
   console.log("INIT Token address:", initToken.address);
@@ -17,7 +17,7 @@ async function main() {
   const ideaToken = await IdeaToken.deploy(
     "Inite IDEA Token",
     "IDEA", 
-    "100000000" // 100mln tokens
+    "100000000000000000000000000" // 100mln tokens
   );
 
   console.log("IDEA Token address:", ideaToken.address);
